@@ -23,3 +23,11 @@ tsconfig.json:
 
 >npm init -y  // to create package.json
 >npm install nodemon concurrently
+
+package.json:    
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+
+>npm start  
+

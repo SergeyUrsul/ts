@@ -1,7 +1,7 @@
 console.log('Hi there!');
 
 const logSomething = () => {
-  console.log('something');
+  console.log('something!!');
 };
 
 logSomething();
