@@ -54,7 +54,7 @@ https://jsonplaceholder.typicode.com/
 >tsc index.ts
 >node index.js
 // ts-node combines two commands (tsc & node)
->ts-node index.ts
+>npx ts-node index.ts
 
 
 ========== Раздел 9: Design Patterns with Typescript
