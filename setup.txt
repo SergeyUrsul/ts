@@ -1,5 +1,11 @@
->npm install -g typescript ts-node
+== Environment Setup
+Typescript compiler
+>npm install -g ts-node typescript 
 >tsc --help // ts compiler
+
+npx используется для запуска двоичных файлов из модулей, которые установлены локально в node_modules
+>npx ts-node -v
+
 
 // Setup VSC
 // Add 'code' to path
@@ -25,6 +31,17 @@
 
 -----------------------------------------------------------------------------
 
+====================== Prepare github project ts ===
+
+https://github.com/SergeyUrsul/ts
+
+>git clone ts
+>copy <work files and dirs> to .\ts
+>git add .
+>git commit -m 'create project'
+>git push origin master 
+
+
 //////////// APP "fetchjson" ///////////////
 // Fake Online REST API for Testing and Prototyping
 https://jsonplaceholder.typicode.com/
@@ -38,3 +55,47 @@ https://jsonplaceholder.typicode.com/
 >node index.js
 // ts-node combines two commands (tsc & node)
 >ts-node index.ts
+
+
+========== Раздел 9: Design Patterns with Typescript
+- to actually get some typescript code running inside the browser very easily:
+>npm install -g parcel-bundler
+>parcel index.html
+>npm install faker
+>npm install @types/faker
+
+// create Project on https://console.developers.google.com
+https://console.developers.google.com/apis/dashboard?project=stephen-grider-maps&supportedpurview=project
+
+// create API key
+https://console.developers.google.com/apis/credentials/key/091e8e78-d2a0-4e5e-b0e0-a83c38b56cc4?project=stephen-grider-maps&supportedpurview=project
+
+>npm install @types/googlemaps
+
+//  Работа в продакшене https://parceljs.org/production.html
+>parcel build ./index.html
+
+
+======================== Configuring the TS Compiler =====
+
+>tsc index.ts
+sort>tsc --init
+message TS6071: Successfully created a tsconfig.json file.
+
+tsconfig.json:
+    "outDir": "./build",   /* Redirect output structure to the directory. */
+    "rootDir": "./src",    /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+>tsc
+
+======================== Concurent Compilation and Execution ===
+
+>npm init -y  // to create package.json
+>npm install nodemon concurrently
+
+package.json:    
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+
+>npm start  
+
