@@ -21,3 +21,5 @@ tsconfig.json:
 
 === Concurent Compilation and Execution ===
 
+>npm init -y  // to create package.json
+>npm install nodemon concurrently
