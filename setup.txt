@@ -1,0 +1,40 @@
+>npm install -g typescript ts-node
+>tsc --help // ts compiler
+
+// Setup VSC
+// Add 'code' to path
+// Install Prettier Extension
+//		View - Extensions:
+// 		Prettier - Code formatter (Esben Pitersen)
+//		VS Code plugin for prettier/prettier
+// Run Prettier on save
+//		File - Preferences - Settings:
+//		type "format on save", set checkbox in "Editor: Format On Save"
+// Use single quotes with prettier
+//		File - Preferences - Settings:
+//		type "single quotes", set checkbox in "Prettier: Single Quote"
+// Use two spaces for identation
+//		File - Preferences - Settings:
+//		clear search settings box, set "Editor: Tab Size" = 2
+// Set theme to 'Solarized Light'
+//		File - Preferences - Settings:
+//		type "theme", set Workbench: Color Theme = "Solorized Light" | "Default Dark+"
+// Hide Left Bar
+//		File - Preferences - Settings:
+//		type "activity bar", clear checkbox "Workbanch > Activity bar: Visible"
+
+-----------------------------------------------------------------------------
+
+//////////// APP "fetchjson" ///////////////
+// Fake Online REST API for Testing and Prototyping
+https://jsonplaceholder.typicode.com/
+
+// md fetchjson
+// cd fetchjson
+>npm init -y // to gen package.json
+>npm install axios
+>code .
+>tsc index.ts
+>node index.js
+// ts-node combines two commands (tsc & node)
+>ts-node index.ts
