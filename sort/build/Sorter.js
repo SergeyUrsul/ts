@@ -8,12 +8,8 @@ var Sorter = /** @class */ (function () {
         var length = this.collection.length;
         for (var i = 0; i < length - 1; i++) {
             for (var j = 0; j < length - 1 - i; j++) {
-                if (this.collection instanceof Array) {
-                    if (this.collection[j] > this.collection[j + 1]) {
-                        var temp = this.collection[j];
-                        this.collection[j] = this.collection[j + 1];
-                        this.collection[j + 1] = temp;
-                    }
+                if (this.collection.compare(j, j + 1)) {
+                    this.collection.swap(j, j + 1);
                 }
             }
         }
