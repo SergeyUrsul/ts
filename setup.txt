@@ -104,3 +104,25 @@ package.json:
 
 >npm start  
 
+==========================  Раздел 11: Reusable Code ============
+
+>cd ts
+>mkdir stats
+>cd stats
+>npm init -y // to generate package.json
+>tsc --init // to generate tsconfig.json
+>npm install nodemon concurrently
+>mkdir src
+>mkdir dist
+// cretate src\index.ts with console.log('Hi there')
+// edit tsconfig.json: outDir, rootDir
+// edit package.json: "scripts": { 
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"	
+	}
+>npm start	
+// open site: nodejs.org/api
+
+
+ 
