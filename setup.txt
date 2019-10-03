@@ -123,6 +123,7 @@ package.json:
 	}
 >npm start	
 // open site: nodejs.org/api
+>npm install @types/node // to instal type definitions of node built in modules
 
 
  
